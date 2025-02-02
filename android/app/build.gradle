@@ -32,12 +32,12 @@ android {
     ndkVersion flutter.ndkVersion
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_21
+        targetCompatibility JavaVersion.VERSION_21
     }
 
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '21'
     }
 
     sourceSets {
@@ -97,7 +97,7 @@ android {
 
     externalNativeBuild {
         cmake {
-            version '3.22.1'
+            version '3.31.5'
             path file('CMakeLists.txt')
         }
     }
@@ -133,7 +133,7 @@ dependencies {
     implementation "androidx.recyclerview:recyclerview:1.2.1"
 
     
-    def roomVersion = "2.6.1"
+    def roomVersion = "2.7.0-alpha13"
     implementation "androidx.room:room-runtime:$roomVersion"
     implementation "androidx.room:room-ktx:$roomVersion"
     kapt "androidx.room:room-compiler:$roomVersion"
